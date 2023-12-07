@@ -1,17 +1,24 @@
-// DrumPad.js
-import React from 'react';
+import React, { useRef } from 'react';
+import '../css/DrumPad.css'
 
-const DrumPad = ( props:any ) => {
+const DrumPad = (props: any) => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   const handlePlay = () => {
-    // Use Tone.js to play the sound
-    props.onPlay(props.sound);
+    // Programmatically play the audio from the public folder
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
   };
 
   return (
     <div className="drum-pad" onClick={handlePlay}>
-      {props.sound}
+      {props.sound.id}
+      <audio ref={audioRef} src={`./sounds/${props.sound.id}.wav`} />
     </div>
   );
 };
 
 export default DrumPad;
+
+
