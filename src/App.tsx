@@ -33,11 +33,11 @@ const App = () => {
     player.start();
   };
 
-  const handleControlChange = (param: any, value: any = 0.5) => {
+  const handleControlChange = (param: string, value: number = 0.5) => {
     // Update the corresponding parameter for all sounds
     // Implement your logic here
     if (param === 'masterVolume') {
-      setMasterVolume(value);
+      // Your logic for master volume
       // Adjust the overall volume for all sounds using Tone.js
       Tone.Master.volume.value = value;
     }

@@ -1,23 +1,17 @@
 /* Knob.css */
-
-.knob {
-    width: 80px;
-    height: 80px;
+.Knob {
+    position: relative;
+    width: 100px;
+    height: 100px;
     margin: 10px;
-    background-color: #61dafb;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 16px;
-    border: 2px solid #61dafb;
-    border-radius: 50%; /* Make it a circle */
-    transition: background-color 0.3s, color 0.3s;
   }
   
-  .knob:hover {
-    background-color: #45a8c2;
-    color: #fff;
+  .Knob-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #000;
   }
   

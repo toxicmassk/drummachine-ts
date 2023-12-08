@@ -1,22 +1,22 @@
 // Knob.tsx
 import React from 'react';
 import ReactKnob from 'react-knob';
+import '../css/Knob.css'; // Update the path to the CSS file
+import dialImage from '../../public/img/dial.jpeg';
 
 interface KnobProps {
     value: number;
     onChange: (value: number) => void;
 }
-
-const Knob: React.FC<KnobProps> = ({ value, onChange }) => {
+const Knob: React.FC<KnobProps> = (props) => {
     return (
-        <div style={{ width: '50px', textAlign: 'center', margin: '10px' }}>
+        <div className="Knob">
+            <div className="Knob-label">
+                <input type="number" />
+            </div>
             <ReactKnob
-                min={0}
-                max={1}
-                value={value}
-                onChange={(v: number) => onChange(v)}
-                fgColor="#61dafb"
-                bgColor="#282c34"
+                // ... other props
+                img={dialImage} // Update this line
             />
         </div>
     );
