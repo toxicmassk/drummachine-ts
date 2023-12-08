@@ -1,0 +1,17 @@
+/* css/SoundControls.css */
+
+.SoundControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .KnobContainer {
+    width: 100px; /* Adjust the width as needed */
+  }
+  
+  .KnobLabel {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  

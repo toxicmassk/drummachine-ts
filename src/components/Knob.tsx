@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactKnob from 'react-knob';
 import '../css/Knob.css'; // Update the path to the CSS file
-import dialImage from '../../public/img/dial.jpeg';
+import DialImage from 'dial.jpeg';  // Assuming this is how you import the image
 
 interface KnobProps {
     value: number;
