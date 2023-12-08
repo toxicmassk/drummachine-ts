@@ -1,27 +1,23 @@
-/* DrumPad.css */
+/* Knob.css */
 
-.drum-pad {
+.knob {
     width: 80px;
     height: 80px;
     margin: 10px;
-    background-color: #0c1315;
-    color: rgb(201, 220, 164);
+    background-color: #61dafb;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 16px;
     border: 2px solid #61dafb;
-    border-radius: 5px;
+    border-radius: 50%; /* Make it a circle */
     transition: background-color 0.3s, color 0.3s;
-    @extend .btn;
-    @extend .btn-primary;
   }
-
   
-  .drum-pad:hover {
+  .knob:hover {
     background-color: #45a8c2;
     color: #fff;
-    @extend .btn-primary:hover;
   }
   

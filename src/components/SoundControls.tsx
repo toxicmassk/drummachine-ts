@@ -1,53 +1,30 @@
-// SoundControls.js
+// SoundControls.tsx
+
 import React from 'react';
+import Knob from './Knob';
 
-
-const SoundControls = ( props:any ) => {
+const SoundControls: React.FC<SoundControlsProps> = ({ onChange }) => {
   return (
     <div>
       <div>
         <span>Level</span>
-        <div onChange={(value:any) => props.onChange('level', value)} />
-        <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label htmlFor="volume">Volume</label>
-</div>
+        <Knob value={0.5} onChange={(value) => onChange('level', value)} />
       </div>
       <div>
         <span>Pitch</span>
-        <div onChange={(value:any) => props.onChange('pitch', value)} />
-        <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label htmlFor="volume">Volume</label>
-</div>
+        <Knob value={0.3} onChange={(value) => onChange('pitch', value)} />
       </div>
       <div>
         <span>Decay</span>
-        <div onChange={(value:any) => props.onChange('decay', value)} />
-        <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label htmlFor="volume">Volume</label>
-</div>
+        <Knob value={0.7} onChange={(value) => onChange('decay', value)} />
       </div>
       <div>
         <span>Filter</span>
-        <div onChange={(value:any) => props.onChange('filter', value)} />
-        <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label htmlFor="volume">Volume</label>
-</div>
-      </div>
-      {/* Repeat for other parameters (pitch, decay, lowpass filter) */}
-      <div>
-        <span>Master Volume</span>
-        <div onChange={(value:any) => props.onChange('masterVolume', value)} />
-        <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label htmlFor="volume">Volume</label>
-</div>
+        <Knob value={0.2} onChange={(value) => onChange('filter', value)} />
       </div>
     </div>
   );
 };
 
 export default SoundControls;
+

@@ -12,10 +12,10 @@ const DrumPad = (props: any) => {
   };
 
   return (
-    <div className="drum-pad" onClick={handlePlay}>
+    <button className="btn btn-primary drum-pad" onClick={handlePlay}>
       {props.sound.id}
       <audio ref={audioRef} src={`./sounds/${props.sound.id}.wav`} />
-    </div>
+    </button>
   );
 };
 
