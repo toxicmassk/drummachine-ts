@@ -1,25 +1,21 @@
-// Knob.tsx
 import React from 'react';
-import ReactKnob from 'react-knob';
-import '../css/Knob.css'; // Update the path to the CSS file
-import DialImage from 'dial.jpeg';  // Assuming this is how you import the image
+// Import the correct module from 'react-knob'
+import { Knob } from 'react-knob';
 
 interface KnobProps {
-    value: number;
-    onChange: (value: number) => void;
+    // Specify your prop types here
 }
-const Knob: React.FC<KnobProps> = (props) => {
+
+const YourComponent: React.FC<KnobProps> = (props) => {
     return (
-        <div className="Knob">
-            <div className="Knob-label">
-                <input type="number" />
-            </div>
-            <ReactKnob
-                // ... other props
-                img={dialImage} // Update this line
+        <div>
+            {/* Use 'Knob' component from react-knob */}
+            <Knob
+            // Your Knob component props here
             />
         </div>
     );
 };
 
-export default Knob;
+export default YourComponent;
+

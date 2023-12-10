@@ -3,6 +3,7 @@
 import React from 'react';
 import Knob from './Knob';
 import '../css/SoundControls.css';
+import * as Knob from 'react-knob';
 
 interface SoundControlsProps {
   onChange: (param: string, value: number) => void;
